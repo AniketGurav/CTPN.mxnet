@@ -15,6 +15,10 @@
 # specific language governing permissions and limitations
 # under the License.
 
+
+''''
+  this function is called from train_ctpn.py
+''''
 import argparse
 import pprint
 import mxnet as mx
@@ -105,6 +109,11 @@ def train_rcnn(network, dataset, image_set, root_path, dataset_path,
         fixed_param_prefix = config.FIXED_PARAMS_SHARED
     else:
         fixed_param_prefix = config.FIXED_PARAMS
+        
+        
+    '''
+      does below part loads network????
+    '''
     mod = MutableModule(sym, data_names=data_names, label_names=label_names,
                         logger=logger, context=ctx, work_load_list=work_load_list,
                         max_data_shapes=max_data_shape, fixed_param_prefix=fixed_param_prefix)
