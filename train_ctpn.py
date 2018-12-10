@@ -23,6 +23,10 @@ import mxnet as mx
 
 from rcnn.logger import logger
 from rcnn.config import config, default, generate_config
+
+'''
+  here main training part can be present
+'''
 from rcnn.tools.train_rpn import train_rpn
 from rcnn.tools.test_rpn import test_rpn
 from rcnn.tools.train_rcnn import train_rcnn
